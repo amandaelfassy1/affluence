@@ -16,13 +16,13 @@
     <h5>Confirmez votre réservation en cliquant sur le bouton ci-dessous</h5>
     </div>        
     <div class="content">
-        <a href="{{ route('confirmation') }}">
+        <a href="{{ route('confirmation', $token) }}">
             <button class="confirmation">Confirmer ma réservation</button>
         </a>
         <h4>Récapitulatif de votre demande</h4>
         <ul>
             <li>Date: {{ $date }}  </li>
-            <li>Heure : {{ $time }}h00 à {{$time+1}}h00</li>
+            <li>Heure : {{ $time }}</li>
         </ul>
         <a href="{{ route('annulation_token', $token) }}">
             <button class="annulation">Annuler ma réservation</button>

@@ -32,7 +32,7 @@
                             {{$date}}
                             </td>
                             <td class="px-16 py-2">
-                            {{$time}}h00
+                            {{$time}}
                             </td>
                             <td class="px-16 py-2">
                             1h00 

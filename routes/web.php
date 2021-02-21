@@ -9,7 +9,7 @@ Route::get('/reservation', [\App\Http\Controllers\ReservationFormController::cla
 
 Route::post('/reservation', [\App\Http\Controllers\ReservationFormController::class, 'send'])->name('contact.send');
 
-Route::get('/confirmation', [\App\Http\Controllers\ConfirmationController::class, 'show'])->name('confirmation');
+Route::get('/confirmation/{token}', [\App\Http\Controllers\ConfirmationController::class, 'show'])->name('confirmation');
 
 Route::get('/reservation/annulation/{token}', [\App\Http\Controllers\AnnulationController::class, 'delete'])->name('annulation_token');
 

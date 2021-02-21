@@ -8,13 +8,15 @@
         <h1 class="my-4 text-5xl font-bold leading-tight">
             Vous rêvez de faire de la plongée sous-marine ?
         </h1>
-        <p class="leading-normal text-2xl mb-8">
+        <h6 class="leading-normal text-2xl mb-8">
             C'est possible avec divingAffluence ! Réservez en 2 clics !
-        </p>
-        
-        <!-- <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Subscribe
-        </button> -->
+        </h6>
+        <a href="/reservation">
+           <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-5 px-12 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        Réservation
+        </button>
+        </a>
+     
     </div>
     <!--Right Col-->
     <div class="w-full md:w-3/5 py-6 text-center">
@@ -178,7 +180,8 @@
     </g>
     </g>
 </svg>
-<section class="container mx-auto text-center py-6 mb-12">
+
+<section id="horaire" class="container mx-auto text-center py-6 mb-12">
     <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
             Horaires
     </h1>
@@ -210,11 +213,12 @@
         </tbody>
     </table>
 </section>
+
 <style>
 p{
     padding : 20px;
 }
-tbody{
+    tbody{
     border-color: black !important;
     border-top : 1px solid black;
 }
