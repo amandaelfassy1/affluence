@@ -2,25 +2,22 @@
 @section('content')
 @include('partials.navbar')
 <div class="pt-24">
+    @if(Session::has('success'))
+    <div class="bg-green-100 border text-center border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+        <strong class="font-bold ">{{ Session::get('success') }}</strong>
+    </div>
+    @endif
     <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-    <!--Left Col-->
     <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-        <h1 class="my-4 text-5xl font-bold leading-tight">
-            Vous rêvez de faire de la plongée sous-marine ?
+        <h1 class="my-4 text-6xl font-bold leading-tight">
+           La plongée pour <br>vous évader ?
         </h1>
         <h6 class="leading-normal text-2xl mb-8">
             C'est possible avec divingAffluence ! Réservez en 2 clics !
         </h6>
-        <a href="/reservation">
-           <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-5 px-12 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Réservation
-        </button>
-        </a>
-     
     </div>
-    <!--Right Col-->
     <div class="w-full md:w-3/5 py-6 text-center">
-        <img class="w-full md:w-4/5 z-50" src="{{ asset('time.png') }}" />
+        <img class="w-full md:w-4/5 z-50" src="{{ asset('scuba.png') }}" />
     </div>
     </div>
 </div>
@@ -45,62 +42,85 @@
 </div>
 <section class="bg-white border-b py-8">
     <div class="container max-w-5xl mx-auto m-8">
-    <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-        Title
-    </h1>
-    <div class="w-full mb-4">
-        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-    </div>
-    <div class="flex flex-wrap">
-        <div class="w-5/6 sm:w-1/2 p-6">
-        <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-            Lorem ipsum dolor sit amet
-        </h3>
-        <p class="text-gray-600 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-            <br />
-            <br />
-
-            Images from:
-
-            <a class="text-pink-500 underline" href="https://undraw.co/">undraw.co</a>
-        </p>
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Horaires
+        </h1>
+        <div class="w-full mb-4">
+            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="w-full sm:w-1/2 p-6">
-        <img src="{{ asset('nike.jpg') }}" alt="">
-        </div>
-    </div>
-    <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+        <div class="flex flex-wrap">
+            <div class="w-5/6 sm:w-1/2 p-2">
+                <table class="rounded-t-lg m-5 w-5/6 mx-auto text-gray-800">
+                    <tr class="bg-white-100 border-b border-black">
+                        <th class="px-4 py-3">Lundi</td>
+                        <td class="px-4 py-3">9h00 - 18h00</td>
+                    </tr> 
+                    <!-- each row -->
+                    <tr class="bg-white-100 border-b border-black">
+                        <th class="px-4 py-3">Mardi</td>
+                        <td class="px-4 py-3">9h00 - 18h00</td>
+                    </tr> 
+                    <!-- each row -->
+                    <tr class="bg-white-100 border-b border-black">
+                        <th class="px-4 py-3">Mercredi</td>
+                        <td class="px-4 py-3">9h00 - 18h00</td>
+                    </tr>
+                    <!-- each row -->
+                    <tr class="bg-white-100 border-b border-black">
+                            <th class="px-4 py-3">Jeudi</td>
+                            <td class="px-4 py-3">9h00 - 18h00</td>
+                        </tr>
+
+                        <tr class="bg-white-100 border-b border-black">
+                            <th class="px-4 py-3">Vendredi</td>
+                            <td class="px-4 py-3">9h00 - 18h00</td>
+                        </tr>
+
+                        <tr class="bg-white-100 border-b border-black">
+                            <th class="px-4 py-3">Samedi</td>
+                            <td class="px-4 py-3">Fermé</td>
+                        </tr>
+                        
+                        <tr class="bg-white-100 border-b border-black">
+                            <th class="px-4 py-3">Dimanche</td>
+                            <td class="px-4 py-3">Fermé</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="w-full sm:w-1/2 p-6">
+                    <img src="{{ asset('diving1.jpg') }}" alt="">
+                </div>
+            </div>
+            <div class="flex flex-wrap flex-col-reverse sm:flex-row">
         <div class="w-full sm:w-1/2 p-6 mt-6">
         <img src="{{ asset('fish.jpg') }}" alt="">
         </div>
         <div class="w-full sm:w-1/2 p-6 mt-6">
         <div class="align-middle">
             <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-            Lorem ipsum dolor sit amet
+            Informations pratiques
             </h3>
-            <p class="text-gray-600 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-            <br />
-            <br />
-            Images from:
-
-            <a class="text-pink-500 underline" href="https://undraw.co/">undraw.co</a>
-            </p>
+            <div class="text-gray-600 mb-8">
+                <p><strong>Téléphone :</strong>  +262 262 24 22 00</p>
+                <p>Encadrement par moniteurs diplomés, équipement complet, transport en bateau, assurances.</p> 
+                <p>Tous mode de paiement est accepté : Chèques, cartes bancaires, espèces, et chèques vacances</p>
+            </div>
         </div>
         </div>
     </div>
     </div>
 </section>
 <section class="bg-white border-b ">
-    <div style="width: 100%">
+    <!-- <div style="width: 100%">
         <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Marina%20de%20Saint-Gilles,%20Avant-Port,%20Local%20n%C2%B05,%20Saint-Gilles%20les%20Bains%2097434,%20La%20R%C3%A9union+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-    </div> 
+    </div>  -->
+    <div id="map"></div>
 </section>
+
 <section class="bg-gray-100 py-8">
     <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
     <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-        Avis client
+        Avis clients
     </h1>
     <div class="w-full mb-4">
         <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -118,8 +138,11 @@
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                £0
-                <span class="text-base">for one user</span>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
                 </div>            
             </div>
         </div>
@@ -134,8 +157,11 @@
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div class="w-full pt-6 text-4xl font-bold text-center">
-                £x.99
-                    <span class="text-base">/ per user</span>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -150,8 +176,11 @@
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                    £x.99
-                    <span class="text-base">/ per user</span>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -180,47 +209,38 @@
     </g>
     </g>
 </svg>
-
-<section id="horaire" class="container mx-auto text-center py-6 mb-12">
-    <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-            Horaires
-    </h1>
-    <div class="w-full mb-4">
-        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
-    </div>
-    <table class="w-full my-2  leading-tight text-center text-black">
-        <thead>
-            <tr>
-                <th scope="col">Lundi</th>
-                <th scope="col">Mardi</th>
-                <th scope="col">Mercredi</th>
-                <th scope="col">Jeudi</th>
-                <th scope="col">Vendredi</th>
-                <th scope="col">Samedi</th>
-                <th scope="col">Dimanche</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row">9h - 18h</th>
-                <td scope="row">9h - 18h</th>
-                <td scope="row">9h - 18h</th>
-                <td scope="row">9h - 18h</th>
-                <td scope="row">9h - 18h</th>
-                <td scope="row">Fermé</td>
-                <td scope="row">Fermé</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
+<section class="container mx-auto text-center py-6 mb-12"></section>
 <style>
 p{
     padding : 20px;
 }
-    tbody{
+tbody{
     border-color: black !important;
     border-top : 1px solid black;
 }
+
+i.fas.fa-star {
+    color: orange;
+}
+#map {
+  height: 400px;
+  width: 100%;
+}
 </style>
+
+
+<script>
+function initMap() {
+  const reunion = { lat:-21.05576284286255, lng: 55.223455294475656 };
+ const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+    center: reunion,
+  });
+  const marker = new google.maps.Marker({
+    position: reunion,
+    map: map,
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFM8NSdzR-2zNtoztI8JUL4wa2IEFuJJc&callback=initMap&libraries=&v=weekly" async></script>
 @endsection

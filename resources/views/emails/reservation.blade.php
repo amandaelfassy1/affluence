@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <p>Confirmer votre réservation divingAffluence</p>
+        <p> divingAffluence</p>
         <hr>
     </header>
     
@@ -21,8 +21,8 @@
         </a>
         <h4>Récapitulatif de votre demande</h4>
         <ul>
-            <li>Date: {{ $date }}  </li>
-            <li>Heure : {{ $time }}</li>
+            <li><strong>Date :</strong> {{ $date }}  </li>
+            <li><strong>Heure :</strong> {{ $time }}</li>
         </ul>
         <a href="{{ route('annulation_token', $token) }}">
             <button class="annulation">Annuler ma réservation</button>
@@ -73,6 +73,12 @@
         background-color : #D6F0FB;
         color : #023873;
         font-weight : bold;
+        padding : 7px;
+    }
+    ul{
+      list-style:none;  
+    }
+    li{
         padding : 7px;
     }
 </style>

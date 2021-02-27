@@ -26,23 +26,23 @@
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200 p-0">
-          @foreach($reservations as $reservation)
+          @foreach($contacts as $contact)
             <tr>
               <td class="py-4 whitespace-nowrap">
                 <div class="flex items-center">
                   <div class="ml-4">
                     <div class="text-sm font-medium text-gray-900">
-                      {{ $reservation->first_name }} {{ $reservation->last_name }}
+                      {{ $contact->first_name }} {{ $contact->last_name }}
                     </div>
                   </div>
                 </div>
               </td>
               <td class="py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">{{ $reservation->email }}</div>
+                <div class="text-sm text-gray-900">{{ $contact->email }}</div>
               </td>
               <td class="py-4 whitespace-nowrap">
                 <div class="px-2 flex text-xs leading-5 font-semibold text-green-800">
-                {{ Str::limit($reservation->message, 50) }}
+                {{ Str::limit($contact->message, 50) }}
                 </div>
               </td>
             </tr>
