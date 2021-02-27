@@ -11,7 +11,9 @@ class ConfirmationController extends Controller
     
         DB::table('reservations')->where('token', $token)
         ->update(['confirmation' => true]);
-        
-        return view('confirmation');        
+      
+    
+        return redirect('/')->with('success', 'Réservation confirmée !'); 
+
     }
 }
