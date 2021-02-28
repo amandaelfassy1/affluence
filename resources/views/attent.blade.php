@@ -19,7 +19,7 @@
 img{
     width: 40%;
    margin : auto;
-   border-radius: 50%
+   border-radius: 50%;
 }
 h1{
     font-size: 30px;
@@ -29,4 +29,3 @@ h3{
 }
 </style>
 @endSection
-
