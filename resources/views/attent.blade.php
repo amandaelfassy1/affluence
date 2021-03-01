@@ -10,7 +10,7 @@
                 <img src="{{asset('scuba.jpg')}}" alt="">
                 <h1 class="text-black font-bold mb-6 mt-6">En attente de confirmation</h1>
                 <hr>
-                <h3  class="text-blue font-bold">Pour finaliser votre demande, vous devez confirmer l'adresse mail de votre réservation, depuis le mail reçu.</p></h3>
+                <h3  class="text-blue font-bold">Pour finaliser votre demande, vous devez confirmer votre réservation, depuis le mail reçu.</p></h3>
             </div>
         </div>
     </div>
