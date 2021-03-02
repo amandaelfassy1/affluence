@@ -11,6 +11,7 @@ class IndexController extends Controller
             'name'=>(Config::get('information.name')),
             'adress'=>(Config::get('information.adress')),
             'title'=>(Config::get('information.adress')),
+            'tel'=>(Config::get('information.tel')),
         ];
         return view('index', $informations);
     }

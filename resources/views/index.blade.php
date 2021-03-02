@@ -101,8 +101,8 @@
             Informations pratiques
             </h3>
             <div class="text-gray-600 mb-8">
-                <p>{{$adress}}</p>
-                <p><strong>Téléphone :</strong>  +262 262 24 22 00</p>
+                <p><strong>Adresse : </strong>{{$adress}}</p>
+                <p><strong>Téléphone :</strong>{{$tel}}</p>
                 <p>Encadrement par moniteurs diplomés, équipement complet, transport en bateau, assurances.</p> 
                 <p>Tous mode de paiement est accepté : Chèques, cartes bancaires, espèces, et chèques vacances</p>
             </div>
