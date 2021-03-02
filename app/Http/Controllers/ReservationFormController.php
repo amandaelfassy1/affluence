@@ -32,7 +32,7 @@ class ReservationFormController extends Controller
             'token'=> $params['token']
         ]);
         Mail::to($params['email'])->send(new Reservation($params));
-
+        
         return view('attent');
     }
 }

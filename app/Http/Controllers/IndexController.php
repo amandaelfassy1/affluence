@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Config;
 class IndexController extends Controller
 {
     public function index(){
-        return view('index');
+        $informations=[
+            'name'=>(Config::get('information.name')),
+            'adress'=>(Config::get('information.adress')),
+            'title'=>(Config::get('information.adress')),
+        ];
+        return view('index', $informations);
     }
 }

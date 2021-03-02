@@ -14,3 +14,4 @@ Route::get('/confirmation/{token}', [\App\Http\Controllers\ConfirmationControlle
 Route::get('/reservation/annulation/{token}', [\App\Http\Controllers\AnnulationController::class, 'delete'])->name('annulation_token');
 
 Route::post('/annulation/{token}', [\App\Http\Controllers\AnnulationController::class, 'annulation'])->name('annulation');
+

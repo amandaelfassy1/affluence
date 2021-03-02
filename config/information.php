@@ -1,9 +1,8 @@
 <?php 
 return 
 [
-    'email' => env('MAIL_FROM_ADRESS'),
-    'date' => ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'],
-    'time' => env('MAIL_FROM_TIME'),
-    'token' => env('MAIL_FROM_TOKEN'),
-    'confirmation' => env('MAIL_FROM_CONFIRMATION'),
+    'day' => 'du lundi au vendredi',
+    'Heures' => env('MAIL_FROM_TIME'),
+    'name' => 'divingAffluence',
+    'adress' =>'Marina de Saint-Gilles, Avant-Port, Local n°5, Saint-Gilles les Bains 97434, La Réunion',
 ];
