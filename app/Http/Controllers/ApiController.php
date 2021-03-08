@@ -41,7 +41,10 @@ class ApiController extends Controller
             ]);
             Mail::to($params['email'])->send(new Reservation($params));
             
-            return response()->json('Votre reservation a bien été confirmée',201);
+            return response()->json([
+                'message' =>'Votre reservation a bien été confirmée',
+                'token'=> $params['token']        
+            ],201);
           
     }
 
