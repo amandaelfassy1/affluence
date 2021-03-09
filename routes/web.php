@@ -15,3 +15,4 @@ Route::get('/reservation/annulation/{token}', [\App\Http\Controllers\AnnulationC
 
 Route::post('/annulation/{token}', [\App\Http\Controllers\AnnulationController::class, 'annulation'])->name('annulation');
 
+

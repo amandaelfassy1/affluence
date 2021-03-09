@@ -11,6 +11,8 @@ Route::post('reservation', 'App\Http\Controllers\ApiController@store');
 
 Route::post('/reservation/annulation/{token}', 'App\Http\Controllers\ApiController@destroy');
 
+Route::get('/reservation/{token}', 'App\Http\Controllers\ApiController@selectMail');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

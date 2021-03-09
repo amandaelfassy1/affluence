@@ -45,10 +45,24 @@ class ApiController extends Controller
                 'message' =>'Votre reservation a bien été confirmée',
                 'token'=> $params['token']        
             ],201);
-          
     }
 
-   
+    public function selectMail($request)
+    {
+            $reservation = DB::table('reservations')->where(
+                'token', $request 
+            )->first();
+
+            return response()->json([
+                $reservation ->token,      
+                $reservation ->date,      
+                $reservation ->time,      
+                $reservation ->email,      
+                                   
+            ],201);
+    }
+
+
     public function destroy(AnnulationFormRequest $request)
     {
         $reservation = DB::table('reservations')->where(
