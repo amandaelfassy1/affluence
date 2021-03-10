@@ -68,19 +68,23 @@ class ApiController extends Controller
         $reservation = DB::table('reservations')->where(
             'token', $token
         )->first();
+        
+        if(is_null($reservation))
+        {
+            
+            return response()->json('Une erreur est survenue', 404);
+            
+        }
 
         $params = [
             'email' => $reservation->email,
             'subject' => "Ceci est une annulation "
         ];
 
-        if(isset($params['email'])){
+      
             
-            Mail::to($params['email'])->send(new Annulation($params));
-        }
-        else{
-            return response()->json('Une erreur est survenue', 404);
-        }
+        Mail::to($params['email'])->send(new Annulation($params));
+        
 
         DB::table('reservations')->where(
             'token', $token
