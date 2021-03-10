@@ -64,7 +64,7 @@ class ApiController extends Controller
                 'time'=>$reservation ->time,      
                 'email'=>$reservation ->email,      
                                    
-            ],201);
+            ],200);
     }
 
 
