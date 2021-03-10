@@ -31,7 +31,12 @@ class ApiController extends Controller
                 'token'=> uniqid(),
                 'subject' => "Ceci est une reservation "
             ];
-    
+            if(empty($params['email']) || empty($params['date']) || empty($params['time']))
+            {
+                return response()->json([
+                    'message' =>'Veuillez remplir tous les champs ',
+                ],400);
+            }
             DB::table('reservations')->insert([
                 'date' => $params['date'],
                 'time' => $params['time'],
@@ -45,6 +50,7 @@ class ApiController extends Controller
                 'message' =>'Votre reservation a bien été confirmée',
                 'token'=> $params['token']        
             ],201);
+
     }
 
     public function selectMail($request)
