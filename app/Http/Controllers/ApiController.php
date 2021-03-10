@@ -52,7 +52,13 @@ class ApiController extends Controller
             $reservation = DB::table('reservations')->where(
                 'token', $request 
             )->first();
-
+            if(is_null($reservation))
+            {
+                
+                return response()->json('Une erreur est survenue', 404);
+                
+            }
+    
             return response()->json([
                 $reservation ->token,      
                 $reservation ->date,      
