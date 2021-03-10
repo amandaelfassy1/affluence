@@ -9,7 +9,7 @@ Route::get('informations', 'App\Http\Controllers\ApiController@index');
 
 Route::post('reservation', 'App\Http\Controllers\ApiController@store');
 
-Route::post('/reservation/annulation/{token}', 'App\Http\Controllers\ApiController@destroy');
+Route::delete('/reservation/annulation/{token}', 'App\Http\Controllers\ApiController@destroy');
 
 Route::get('/reservation/{token}', 'App\Http\Controllers\ApiController@selectMail');
 

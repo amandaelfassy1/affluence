@@ -63,10 +63,10 @@ class ApiController extends Controller
     }
 
 
-    public function destroy(AnnulationFormRequest $request)
+    public function destroy($token)
     {
         $reservation = DB::table('reservations')->where(
-            'token', $request->route('token') 
+            'token', $token
         )->first();
 
         $params = [
@@ -79,11 +79,11 @@ class ApiController extends Controller
             Mail::to($params['email'])->send(new Annulation($params));
         }
         else{
-            return redirect('/');
+            return response()->json('Une erreur est survenue', 404);
         }
 
         DB::table('reservations')->where(
-            'token', $request->route('token'),
+            'token', $token
         )->delete();
 
         return response()->json('Votre reservation a bien été annulée',200);
