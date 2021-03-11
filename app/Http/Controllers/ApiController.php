@@ -47,7 +47,7 @@ class ApiController extends Controller
             if (count($result) >= 2){
                 return response()->json('Plus de place disponible au créneau horaire choisi',404);
             }
-            
+            dump(count($result));
             if (count($result)>=1){
                 return response()->json('Vous avez déja reservé pour ce créneau horaire !', 404);
             }
