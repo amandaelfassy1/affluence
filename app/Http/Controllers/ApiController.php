@@ -55,7 +55,7 @@ class ApiController extends Controller
             ])->get();
 
             if (count($available) >= 2){
-                return response()->json('Plus de place disponible au créneau horaire choisi',404);
+            return response()->json(['message' =>'Plus de place disponible au créneau horaire choisi'],404);
             }
 
             DB::table('reservations')->insert([
