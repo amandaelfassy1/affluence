@@ -20,7 +20,7 @@ class CreateReservationsTable extends Migration
             $table->integer('time');
             $table->string('email');
             $table->string('token');
-            $table->bool('confirmation');
+            $table->boolean('confirmation');
         });
     }
 
