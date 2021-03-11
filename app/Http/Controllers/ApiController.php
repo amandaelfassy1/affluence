@@ -46,7 +46,7 @@ class ApiController extends Controller
 
            
             if (count($result)>=1){
-                return response()->json('Vous avez déja reservé pour ce créneau horaire !', 404);
+                return response()->json(error: true , message: 'Vous avez déja reservé pour ce créneau horaire !', );
             }
 
             $available = DB::table('reservations')->where([
