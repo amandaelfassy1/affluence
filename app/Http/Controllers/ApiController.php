@@ -44,13 +44,20 @@ class ApiController extends Controller
                 'email'=>  $params['email'], 
             ])->get();
 
-            if (count($result) >= 2){
-                return response()->json('Plus de place disponible au créneau horaire choisi',404);
-            }
-            dump(count($result));
+           
             if (count($result)>=1){
                 return response()->json('Vous avez déja reservé pour ce créneau horaire !', 404);
             }
+
+            $available = DB::table('reservations')->where([
+                'date'=>  $params['date'], 
+                'time'=> $params['time'],
+            ])->get();
+
+            if (count($available) >= 2){
+                return response()->json('Plus de place disponible au créneau horaire choisi',404);
+            }
+
             DB::table('reservations')->insert([
                 'date' => $params['date'],
                 'time' => $params['time'],
