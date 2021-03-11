@@ -17,7 +17,7 @@ class CreateReservationsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->date('date');
-            $table->integer('time');
+            $table->time('time');
             $table->string('email');
             $table->string('token');
             $table->boolean('confirmation');
